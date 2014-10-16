@@ -1,0 +1,30 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+  - name: ubuntu-12.04
+    driver:
+      customize:
+        memory: 768
+      network:
+        - ["forwarded_port", {guest: 7080, host: 1280}]
+  - name: ubuntu-14.04
+    driver:
+      customize:
+        memory: 768
+      network:
+        - ["forwarded_port", {guest: 7080, host: 1480}]
+  - name: debian-7.6
+    driver:
+      customize:
+        memory: 768
+      network:
+        - ["forwarded_port", {guest: 7080, host: 7680}]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[unifi-video]
+    attributes:
