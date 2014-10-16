@@ -1,41 +1,34 @@
-# unifi-video-cookbook
+# unifi-video cookbook
 
-TODO: Enter the cookbook description here.
+This cookbook is used to install [UniFi Video](http://www.ubnt.com/unifi-video/unifi-nvr/) - software to manage the Ubiquiti UniFi Video Cameras.
+
+## Requirements
+Depends on cookbooks:
+
+- apt
 
 ## Supported Platforms
+Tested and runs on:
 
-TODO: List your supported platforms.
+- Ubuntu 12.04
+- Ubuntu 14.04
 
-## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['unifi-video']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Should also run on 13.04, and 13.10 but not tested yet.
+Support for other OS'es will be added soon.
 
 ## Usage
+Include `recipe[unifi-video::default]` to deploy UniFi Video software.
 
-### unifi-video::default
+## Contributing
+Your contributions is highly appreciated.
+Here is standart instruction how to do so:
 
-Include `unifi-video` in your node's `run_list`:
-
-```json
-{
-  "run_list": [
-    "recipe[unifi-video::default]"
-  ]
-}
-```
+1. Fork the repository on Github
+2. Create a named feature branch (i.e. `add-new-recipe`)
+3. Write your change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request
 
 ## License and Authors
 - Author:: SiruS (https://github.com/podwhitehawk)

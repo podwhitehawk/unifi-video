@@ -18,24 +18,22 @@
 #
 
 if platform_family?('debian')
-	include_recipe 'apt'
+  include_recipe 'apt'
 end
 
-if platform?('ubuntu') 
-	if node['platform_version'] <= '14.04' && node['platform_version'] >= '12.04' 
-		apt_repository 'unifi-video' do
-		  uri '[arch=amd64] http://www.ubnt.com/downloads/unifi-video/apt'
-			distribution node['lsb']['codename'] 
-		  components ['ubiquiti']
-		  key 'http://www.ubnt.com/downloads/unifi-video/apt/unifi-video.gpg.key'
-		end
-	end
+if platform?('ubuntu') && node['platform_version'] >= '12.04'
+  apt_repository 'unifi-video' do
+    uri '[arch=amd64] http://www.ubnt.com/downloads/unifi-video/apt'
+    distribution node['lsb']['codename']
+    components ['ubiquiti']
+    key 'http://www.ubnt.com/downloads/unifi-video/apt/unifi-video.gpg.key'
+  end
 else
-	raise "system not yet supported! exiting."
+  raise "This OS version yet not supported either by Ubiquiti packages or by this cookbook! Check README for supported OS list."
 end
 
 package node['unifi-video']['package'] do
-	action :upgrade
+  action :upgrade
 end
 
 service node['unifi-video']['service'] do
