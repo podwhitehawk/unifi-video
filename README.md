@@ -12,8 +12,9 @@ Tested and runs on:
 
 - Ubuntu 12.04
 - Ubuntu 14.04
+- Debian 7
 
-Should also run on 13.04, and 13.10 but not tested yet.
+Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
 Support for other OS'es will be added soon.
 
 ## Usage

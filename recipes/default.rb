@@ -17,11 +17,9 @@
 # limitations under the License.
 #
 
-if platform_family?('debian')
+if (platform?('ubuntu') && node['platform_version'] >= '12.04') || (platform?('debian') && node['platform_version'] >= '7.0')
   include_recipe 'apt'
-end
 
-if platform?('ubuntu') && node['platform_version'] >= '12.04'
   apt_repository 'unifi-video' do
     uri '[arch=amd64] http://www.ubnt.com/downloads/unifi-video/apt'
     distribution node['lsb']['codename']
@@ -33,7 +31,7 @@ else
 end
 
 package node['unifi-video']['package'] do
-  action :upgrade
+  action :install
 end
 
 service node['unifi-video']['service'] do
