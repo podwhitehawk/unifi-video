@@ -1,3 +1,6 @@
+# 1.0.0
+* added package install method
+
 # 0.1.2
 * added debian7 support
 

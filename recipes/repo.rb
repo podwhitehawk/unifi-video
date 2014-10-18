@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: unifi-video
-# Recipe:: default
+# Recipe:: repo
 #
 # Copyright (C) 2014 SiruS (https://github.com/podwhitehawk)
 #
@@ -17,9 +17,13 @@
 # limitations under the License.
 #
 
-if (platform?('ubuntu') && node['platform_version'] >= '12.04') || (platform?('debian') && node['platform_version'] >= '7.0')
-  include_recipe 'apt'
-  include_recipe "unifi-video::#{node['unifi-video']['install_method']}"
-else
-  raise "This OS version yet not supported either by Ubiquiti packages or by this cookbook! Check README for supported OS list."
+apt_repository 'unifi-video' do
+  uri '[arch=amd64] http://www.ubnt.com/downloads/unifi-video/apt'
+  distribution node['lsb']['codename']
+  components ['ubiquiti']
+  key 'http://www.ubnt.com/downloads/unifi-video/apt/unifi-video.gpg.key'
+end
+
+package node['unifi-video']['package'] do
+  action :install
 end
