@@ -1,3 +1,6 @@
+# 1.0.1
+* added digitalocean support
+
 # 1.0.0
 * added package install method
 

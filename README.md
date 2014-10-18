@@ -15,7 +15,6 @@ Tested and runs on:
 - Debian 7
 
 Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
-Support for other OS'es will be added soon.
 
 ## Attributes
 | Key | Description | Values |
