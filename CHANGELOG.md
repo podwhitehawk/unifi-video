@@ -1,3 +1,6 @@
+# 1.0.2
+* switched to mongodb 2.6, thus fixed ubuntu installation
+
 # 1.0.1
 * added digitalocean support
 

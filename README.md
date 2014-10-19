@@ -19,11 +19,11 @@ Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
 ## Attributes
 | Key | Description | Values |
 |-----|------|-------------|-------|
-| node['unifi-video']['package'] | Name of UniFi Viedo package to install | `unifi-video` |
+| node['unifi-video']['package'] | Name of UniFi Video package to install | `unifi-video` |
 | node['unifi-video']['install_method'] | Method to install UniFi Video | `repo` or `package` |
 | node['unifi-video']['version'] | In case of `package` installation this defines version | `3.0.8` |
 | node['unifi-video']['url'] | URL where to get package if install method is `package` |  |
-| node['unifi-video']['mongo-package'] | Name of mongodb package to install | `mongodb-server` |
+| node['unifi-video']['mongo-package'] | Name of mongodb package to install | `mongodb-org-server` |
 | node['unifi-video']['packages'] | Name of package to install | `unifi-video` |
 
 ## Usage
