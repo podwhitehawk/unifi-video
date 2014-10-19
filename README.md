@@ -1,4 +1,5 @@
 # unifi-video cookbook
+[![Build Status](https://secure.travis-ci.org/podwhitehawk/unifi-video.png?branch=master)](http://travis-ci.org/podwhitehawk/unifi-video)
 
 This cookbook is used to install [UniFi Video](http://www.ubnt.com/unifi-video/unifi-nvr/) - software to manage the Ubiquiti UniFi Video Cameras.
 

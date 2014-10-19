@@ -1,3 +1,6 @@
+# 1.0.3
+* added travis-ci integration
+
 # 1.0.2
 * switched to mongodb 2.6, thus fixed ubuntu installation
 
