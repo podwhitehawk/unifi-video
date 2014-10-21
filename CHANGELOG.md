@@ -1,6 +1,10 @@
+# 1.1.0
+* made changes to be able to configure unifi-video
+
 # 1.0.3
 * added travis-ci integration
 * added serverspec tests
+* fixed foodcritic dependency for travis
 
 # 1.0.2
 * switched to mongodb 2.6, thus fixed ubuntu installation

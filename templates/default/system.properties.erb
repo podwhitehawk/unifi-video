@@ -1,0 +1,5 @@
+<% node["unifi-video"]["conf"].each do |key, value| %>
+<% next if value.nil? %>
+<%= key %>=<%= value %>
+<% break if key == 'is_default' && value == 'true' %>
+<% end %>

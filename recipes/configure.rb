@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: unifi-video
-# Recipe:: default
+# Recipe:: configure
 #
 # Copyright (C) 2014 SiruS (https://github.com/podwhitehawk)
 #
@@ -17,11 +17,13 @@
 # limitations under the License.
 #
 
-if (platform?('ubuntu') && node['platform_version'] >= '12.04') || (platform?('debian') && node['platform_version'] >= '7.0')
-  include_recipe 'apt'
-  include_recipe 'unifi-video::common'
-  include_recipe "unifi-video::#{node['unifi-video']['install_method']}"
-  include_recipe 'unifi-video::configure' if node['unifi-video']['conf']['is_default'] != true
-else
-  raise "This OS version yet not supported either by Ubiquiti packages or by this cookbook! Check README for supported OS list."
+template "#{node['unifi-video']['config-dir']}/#{node['unifi-video']['config-file']}" do
+  source 'system.properties.erb'
+  owner node['unifi-video']['user']
+  group node['unifi-video']['group']
+  mode 0644
+end
+
+service node['unifi-video']['service'] do
+  action :restart
 end
