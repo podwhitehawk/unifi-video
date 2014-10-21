@@ -1,7 +1,7 @@
 # unifi-video cookbook
 [![Build Status](https://secure.travis-ci.org/podwhitehawk/unifi-video.png?branch=master)](http://travis-ci.org/podwhitehawk/unifi-video)
 
-This cookbook is used to install [UniFi Video](http://www.ubnt.com/unifi-video/unifi-nvr/) - software to manage the Ubiquiti UniFi Video Cameras.
+This cookbook is used to install [UniFi Video](http://www.ubnt.com/unifi-video/unifi-nvr/) - software to manage the [Ubiquiti](http://www.ubnt.com) UniFi Video Cameras.
 
 ## Requirements
 Depends on cookbooks:
@@ -28,7 +28,7 @@ Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
 | node['unifi-video']['packages'] | Dependencies for `package` installation | `["openjdk-7-jre-headless", "jsvc"]` |
 | node['unifi-video']['service'] | Name of unifi-video service | `unifi-video` |
 | node['unifi-video']['config-dir'] | Path to configfile | `/var/lib/unifi-video` |
-| node['unifi-video']['config-file'] | Path to configfile | `system.properties` |
+| node['unifi-video']['config-file'] | Name of configfile | `system.properties` |
 | node['unifi-video']['user'] | unifi-video system user | `unifi-video` |
 | node['unifi-video']['group'] | unifi-video system group | `unifi-video` |
 | node['unifi-video']['conf']['is_default'] | Use default settings for unifi-video | `true` |
@@ -36,7 +36,7 @@ Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
 If `node['unifi-video']['conf']['is_default']` is not equal to `true`, then `configure` recipe will run and customize unifi-video.
 
 ## Usage
-Include `recipe[unifi-video::default]` to deploy UniFi Video software.
+Adjust attributes to suit your needs and include recipe `[unifi-video::default]` to deploy UniFi Video software.
 
 ## Contributing
 Your contributions is highly appreciated.
