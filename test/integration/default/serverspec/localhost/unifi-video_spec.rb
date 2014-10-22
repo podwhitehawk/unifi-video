@@ -3,9 +3,9 @@ require 'spec_helper'
 describe "mongodb" do
   describe file('/etc/apt/sources.list.d/mongodb.list') do
     it { should be_file }
-    if os[:family] == 'Debian'
+    if os[:family] == 'debian'
       it { should contain 'http://downloads-distro.mongodb.org/repo/debian-sysvinit' }
-    elsif os[:family] == 'Ubuntu'
+    elsif os[:family] == 'ubuntu'
       it { should contain 'http://downloads-distro.mongodb.org/repo/ubuntu-upstart' }
     end
   end
