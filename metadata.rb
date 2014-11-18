@@ -8,6 +8,6 @@ version          '1.1.1'
 
 depends 'apt'
 
-supports 'ubuntu', '== 12.04'
-supports 'ubuntu', '== 14.04'
+supports 'ubuntu', '= 12.04'
+supports 'ubuntu', '= 14.04'
 supports 'debian', '>= 7.0'
