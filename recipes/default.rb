@@ -17,11 +17,16 @@
 # limitations under the License.
 #
 
-if (platform?('ubuntu') && node['platform_version'] >= '12.04') || (platform?('debian') && node['platform_version'] >= '7.0')
+if (platform?('ubuntu') && node['platform_version'] == '12.04') ||
+  (platform?('ubuntu') && node['platform_version'] == '14.04') ||
+  (platform?('debian') && node['platform_version'] >= '7.0') ||
+  node['unifi-video']['override'] == true
   include_recipe 'apt'
   include_recipe 'unifi-video::common'
   include_recipe "unifi-video::#{node['unifi-video']['install_method']}"
   include_recipe 'unifi-video::configure' if node['unifi-video']['conf']['is_default'] != true
 else
-  raise "This OS version yet not supported either by Ubiquiti packages or by this cookbook! Check README for supported OS list."
+  raise "
+  > This OS version yet not supported either by Ubiquiti packages or by this cookbook!
+  > Please, check README for supported OS list or use override flag at your own risk."
 end

@@ -1,3 +1,7 @@
+# 1.1.1
+* added 1 new config variable and fixed db port value
+* dropped support for ubuntu 13.10, added override switch to use on non supported OS
+
 # 1.1.0
 * made changes to be able to configure unifi-video
 

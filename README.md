@@ -15,7 +15,7 @@ Tested and runs on:
 - Ubuntu 14.04
 - Debian 7
 
-Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
+Operating systems not listed above is NOT SUPPORTED, but can be overridden with `default['unifi-video']['override']` set to `true`.
 
 ## Attributes
 | Key | Description | Values |
@@ -32,6 +32,7 @@ Should also run on Ubuntu 13.04 and 13.10 but not tested yet.
 | node['unifi-video']['user'] | unifi-video system user | `unifi-video` |
 | node['unifi-video']['group'] | unifi-video system group | `unifi-video` |
 | node['unifi-video']['conf']['is_default'] | Use default settings for unifi-video | `true` |
+| node['unifi-video']['override'] | Override OS check (Use at your own risk!) | `false` |
 
 If `node['unifi-video']['conf']['is_default']` is not equal to `true`, then `configure` recipe will run and customize unifi-video.
 
