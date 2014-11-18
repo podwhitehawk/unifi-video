@@ -31,10 +31,11 @@ Operating systems not listed above is NOT SUPPORTED, but can be overridden with 
 | node['unifi-video']['config-file'] | Name of configfile | `system.properties` |
 | node['unifi-video']['user'] | unifi-video system user | `unifi-video` |
 | node['unifi-video']['group'] | unifi-video system group | `unifi-video` |
-| node['unifi-video']['conf']['is_default'] | Use default settings for unifi-video | `true` |
+| node['unifi-video']['configure'] | Flag to customize unifi-video settings (Risky!) | `false` |
 | node['unifi-video']['override'] | Override OS check (Use at your own risk!) | `false` |
 
-If `node['unifi-video']['conf']['is_default']` is not equal to `true`, then `configure` recipe will run and customize unifi-video.
+If `node['unifi-video']['configure']` is not equal to `false`, then `configure` recipe will run and customize unifi-video settings according to `['unifi-video']['conf']` attribute group.
+If attribute under `['unifi-video']['conf']` group has `nil` value - it will not be written to config.
 
 ## Usage
 Adjust attributes to suit your needs and include recipe `[unifi-video::default]` to deploy UniFi Video software.

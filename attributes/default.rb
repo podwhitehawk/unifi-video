@@ -13,4 +13,5 @@ default['unifi-video']['config-dir'] = '/var/lib/unifi-video'
 default['unifi-video']['config-file'] = 'system.properties'
 default['unifi-video']['user'] = 'unifi-video'
 default['unifi-video']['group'] = 'unifi-video'
+default['unifi-video']['configure'] = false
 default['unifi-video']['override'] = false

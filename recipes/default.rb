@@ -24,7 +24,7 @@ if (platform?('ubuntu') && node['platform_version'] == '12.04') ||
   include_recipe 'apt'
   include_recipe 'unifi-video::common'
   include_recipe "unifi-video::#{node['unifi-video']['install_method']}"
-  include_recipe 'unifi-video::configure' if node['unifi-video']['conf']['is_default'] != true
+  include_recipe 'unifi-video::configure' if node['unifi-video']['configure'] != false
 else
   raise "
   > This OS version yet not supported either by Ubiquiti packages or by this cookbook!
