@@ -17,3 +17,4 @@ default['unifi-video']['conf']['app.systemName'] = 'myNVR'
 default['unifi-video']['conf']['timezone'] = 'America/Chicago'
 default['unifi-video']['conf']['uuid'] = nil
 default['unifi-video']['conf']['app.shutdown.port'] = 7081
+default['unifi-video']['conf']['system_ip'] = nil # Replace with public ip
