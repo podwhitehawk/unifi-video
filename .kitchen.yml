@@ -18,7 +18,7 @@ platforms:
         cpus: 1
       network:
         - ["private_network", {'ip': '192.168.56.10'}]
-  - name: debian-7.6
+  - name: debian-7.7
     driver:
       customize:
         memory: 512
