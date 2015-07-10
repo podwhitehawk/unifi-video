@@ -1,6 +1,7 @@
 ---
 driver_config:
   digitalocean_api_key: <%= ENV['DIGITALOCEAN_ACCESS_TOKEN'] %>
+  private_networking: false
 
 provisioner:
   name: chef_zero
