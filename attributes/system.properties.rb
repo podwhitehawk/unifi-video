@@ -19,3 +19,4 @@ default['unifi-video']['conf']['uuid'] = nil
 default['unifi-video']['conf']['app.shutdown.port'] = 7081
 default['unifi-video']['conf']['system_ip'] = nil # Replace with public ip
 default['unifi-video']['conf']['app.keystorepass'] = nil
+default['unifi-video']['conf']['app.session.timeout'] = 1440 # 24h
