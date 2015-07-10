@@ -23,7 +23,3 @@ template "#{node['unifi-video']['config-dir']}/#{node['unifi-video']['config-fil
   group node['unifi-video']['group']
   mode 0644
 end
-
-service node['unifi-video']['service'] do
-  action :restart
-end

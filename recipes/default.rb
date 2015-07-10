@@ -30,3 +30,7 @@ else
   > This OS version yet not supported either by Ubiquiti packages or by this cookbook!
   > Please, check README for supported OS list or use override flag at your own risk."
 end
+
+service node['unifi-video']['service'] do
+  action :restart
+end
