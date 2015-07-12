@@ -21,9 +21,19 @@ if (platform?('ubuntu') && node['platform_version'] == '12.04') ||
   (platform?('ubuntu') && node['platform_version'] == '14.04') ||
   (platform?('debian') && node['platform_version'] >= '7.0') ||
   node['unifi-video']['override'] == true
+
   include_recipe 'apt'
   include_recipe 'unifi-video::common'
   include_recipe "unifi-video::#{node['unifi-video']['install_method']}"
+
+  package node['unifi-video']['package'] do
+    if node['unifi-video']['install_method'] == 'package'
+      provider Chef::Provider::Package::Dpkg
+      source "#{Chef::Config[:file_cache_path]}/#{node['unifi-video']['package']}_#{node['platform']}#{node['platform_version']}.deb"
+    end
+    action :install
+  end
+
   include_recipe 'unifi-video::configure' if node['unifi-video']['configure'] != false
 else
   raise "

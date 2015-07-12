@@ -23,7 +23,3 @@ apt_repository 'unifi-video' do
   components ['ubiquiti']
   key 'http://www.ubnt.com/downloads/unifi-video/apt/unifi-video.gpg.key'
 end
-
-package node['unifi-video']['package'] do
-  action :install
-end

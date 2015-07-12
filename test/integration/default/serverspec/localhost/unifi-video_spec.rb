@@ -43,9 +43,6 @@ describe "unifi-video" do
   describe port(7443) do
     it { should be_listening }
   end
-  describe port(1935) do
-    it { should be_listening }
-  end
   describe port(6666) do
     it { should be_listening }
   end

@@ -26,9 +26,5 @@ end
 
 remote_file "download_package" do
   source node['unifi-video']['url']
-  path "#{Chef::Config[:file_cache_path]}/unifi-video.deb"
-end
-
-dpkg_package "install_package" do
-  source "#{Chef::Config[:file_cache_path]}/unifi-video.deb"
+  path "#{Chef::Config[:file_cache_path]}/#{node['unifi-video']['package']}_#{node['platform']}#{node['platform_version']}.deb"
 end

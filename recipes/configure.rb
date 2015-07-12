@@ -22,4 +22,5 @@ template "#{node['unifi-video']['config-dir']}/#{node['unifi-video']['config-fil
   owner node['unifi-video']['user']
   group node['unifi-video']['group']
   mode 0644
+  notifies :restart, "service[#{node['unifi-video']['service']}]", :delayed
 end
