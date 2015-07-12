@@ -32,6 +32,14 @@ platforms:
     region: ams3
     ssh_key_ids: <%= ENV['DIGITALOCEAN_SSH_KEY_IDS'] %>
     ssh_key: <%= ENV['DIGITALOCEAN_SSH_KEY_PATH'] %>
+- name: debian-8-1-x64
+  driver_plugin: digitalocean
+  driver_config:
+    image: debian-8-1-x64
+    size: 512mb
+    region: ams3
+    ssh_key_ids: <%= ENV['DIGITALOCEAN_SSH_KEY_IDS'] %>
+    ssh_key: <%= ENV['DIGITALOCEAN_SSH_KEY_PATH'] %>
 
 suites:
 - name: default

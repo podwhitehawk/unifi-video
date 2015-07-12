@@ -1,3 +1,10 @@
+# 1.1.3
+* updating to support unifi-video 3.1.1
+* added debian 7.8 and 8.1 support
+* fixed settings customization
+* added system_ip, app.keystorepass, app.session.timeout options to system.properties
+* code cleanup and small improvements
+
 # 1.1.2
 * fixed stove version constraint
 * fixed travis build errors
