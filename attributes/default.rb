@@ -1,6 +1,5 @@
 default['unifi-video']['package'] = 'unifi-video'
 default['unifi-video']['service'] = 'unifi-video'
-default['unifi-video']['install_method'] = 'package' # possible values 'repo', 'package'
 default['unifi-video']['version'] = '3.3.0'
 if platform?('debian')
   if node['unifi-video']['version'] <= '3.1.2'

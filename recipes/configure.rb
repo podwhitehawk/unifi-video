@@ -24,3 +24,7 @@ template "#{node['unifi-video']['config-dir']}/#{node['unifi-video']['config-fil
   mode 0644
   notifies :restart, "service[#{node['unifi-video']['service']}]", :delayed
 end
+
+service node['unifi-video']['service'] do
+  action :nothing
+end
