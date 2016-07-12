@@ -1,3 +1,7 @@
+# 1.2.0
+* get rid of repo install method, as it's not supported by UBNT anymore
+* update to use 3.3.0
+
 # 1.1.3
 * updating to support unifi-video 3.1.1
 * added debian 7.8 and 8.1 support

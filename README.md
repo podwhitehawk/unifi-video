@@ -15,17 +15,16 @@ Tested and runs on:
 - Ubuntu 14.04
 - Debian 7/8
 
-Operating systems not listed above is NOT SUPPORTED, but can be overridden with `default['unifi-video']['override']` set to `true`.
+Operating systems not listed above are NOT SUPPORTED, but can be overridden with `default['unifi-video']['override']` set to `true`.
 
 ## Attributes
 | Key | Description | Values |
 |-----|------|-------------|-------|
 | node['unifi-video']['package'] | Name of UniFi Video package to install | `unifi-video` |
-| node['unifi-video']['install_method'] | Method to install UniFi Video | `repo` or `package` |
-| node['unifi-video']['version'] | In case of `package` installation this defines version | `3.1.1` |
-| node['unifi-video']['url'] | URL where to get package if install method is `package` |  |
+| node['unifi-video']['version'] | Defines version to install | `3.3.0` |
+| node['unifi-video']['url'] | URL where to get package |  |
 | node['unifi-video']['mongo-package'] | Name of mongodb package to install | `mongodb-org-server` |
-| node['unifi-video']['packages'] | Dependencies for `package` installation | `["openjdk-7-jre-headless", "jsvc"]` |
+| node['unifi-video']['packages'] | Dependencies for installation | `["openjdk-7-jre-headless", "jsvc"]` |
 | node['unifi-video']['service'] | Name of unifi-video service | `unifi-video` |
 | node['unifi-video']['config-dir'] | Path to configfile | `/var/lib/unifi-video` |
 | node['unifi-video']['config-file'] | Name of configfile | `system.properties` |
@@ -54,7 +53,7 @@ Here is standart instruction how to do so:
 ## License and Authors
 - Author:: SiruS (https://github.com/podwhitehawk)
 ```text
-Copyright (C) 2014-2015 SiruS (https://github.com/podwhitehawk)
+Copyright (C) 2014-2016 SiruS (https://github.com/podwhitehawk)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

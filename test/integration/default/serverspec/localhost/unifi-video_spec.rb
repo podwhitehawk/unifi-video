@@ -1,17 +1,6 @@
 require 'spec_helper'
 
 describe "mongodb" do
-  describe file('/etc/apt/sources.list.d/mongodb.list') do
-    it { should be_file }
-    if os[:family] == 'debian'
-      it { should contain 'http://downloads-distro.mongodb.org/repo/debian-sysvinit' }
-    elsif os[:family] == 'ubuntu'
-      it { should contain 'http://downloads-distro.mongodb.org/repo/ubuntu-upstart' }
-    end
-  end
-  describe package('mongodb-org-server') do
-    it { should be_installed }
-  end
   describe service('mongod') do
     it { should be_enabled }
     it { should be_running }

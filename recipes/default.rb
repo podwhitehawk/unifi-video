@@ -2,7 +2,7 @@
 # Cookbook Name:: unifi-video
 # Recipe:: default
 #
-# Copyright (C) 2014-2015 SiruS (https://github.com/podwhitehawk)
+# Copyright (C) 2014-2016 SiruS (https://github.com/podwhitehawk)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,15 +23,10 @@ if (platform?('ubuntu') && node['platform_version'] == '12.04') ||
   node['unifi-video']['override'] == true
 
   include_recipe 'apt'
-  include_recipe 'unifi-video::common'
   include_recipe 'unifi-video::package'
   include_recipe 'unifi-video::configure' if node['unifi-video']['configure'] != false
 else
   raise "
   > This OS version yet not supported either by Ubiquiti packages or by this cookbook!
   > Please, check README for supported OS list or use override flag at your own risk."
-end
-
-service node['unifi-video']['service'] do
-  action :nothing
 end
