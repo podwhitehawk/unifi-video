@@ -42,5 +42,5 @@ else
 end
 
 service node['unifi-video']['service'] do
-  action :restart
+  action :nothing
 end
