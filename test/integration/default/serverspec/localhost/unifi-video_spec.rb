@@ -10,7 +10,7 @@ describe "mongodb" do
   end
 end
 
-describe package('openjdk-7-jre-headless') do
+describe package('default-jre-headless') do
   it { should be_installed }
 end
 
