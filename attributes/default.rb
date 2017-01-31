@@ -14,7 +14,7 @@ elsif platform?('ubuntu')
     default['unifi-video']['url'] = "http://dl.ubnt.com/firmwares/unifi-video/#{node['unifi-video']['version']}/unifi-video_#{node['unifi-video']['version']}~Ubuntu#{node['platform_version']}_amd64.deb"
   end
 end
-default['unifi-video']['mongo-package'] = 'mongodb-org-server'
+default['unifi-video']['mongo-package'] = 'mongodb'
 default['unifi-video']['packages'] = ["default-jre-headless", "jsvc"]
 default['unifi-video']['config-dir'] = '/var/lib/unifi-video'
 default['unifi-video']['config-file'] = 'system.properties'

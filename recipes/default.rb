@@ -19,6 +19,7 @@
 
 if (platform?('ubuntu') && node['platform_version'] == '12.04') ||
   (platform?('ubuntu') && node['platform_version'] == '14.04') ||
+  (platform?('ubuntu') && node['platform_version'] == '16.04') && node['unifi-video']['version'] >= '3.6.0' ||
   (platform?('debian') && node['platform_version'] >= '7.0') ||
   node['unifi-video']['override'] == true
 

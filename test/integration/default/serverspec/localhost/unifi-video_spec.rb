@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "mongodb" do
-  describe service('mongod') do
+  describe service('mongodb') do
     it { should be_enabled }
     it { should be_running }
   end
